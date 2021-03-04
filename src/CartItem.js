@@ -1,15 +1,34 @@
 import React from "react"
+import Price from "./Price"
+import AddCartBtn from "./AddCartBtn"
+import ItemImage from "./ItemImage"
+import ItemName from "./ItemName"
 
 function CartItem(){
     return(
            <div className="col-md-2" >
-					<img src="" className="center-block"/>
-					<h4 className="text-center">Navy Green Polo Shirt</h4>
+					<ItemImage/>
+					<ItemName/>
 					<hr></hr>
-					<p className="text-center">$<b>10</b>.00</p>
-					<p className="text-center-custom"> or 4 for $30.00</p>
-					<button className="btn btn-default btn-block btn-cart">Add to cart</button>
+					<Price/>
+					<AddCartBtn/>
 			</div> 
     )
 }
+
+/* Import Component
+    class CartItem extends Component{
+        render(
+             <div className="col-md-2" >
+					<ItemImage/>
+					<ItemName/>
+					<hr></hr>
+					<Price/>
+					<AddCartBtn/>
+			</div>   
+        )
+    }
+}
+*/
+
 export default CartItem

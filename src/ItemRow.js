@@ -8,6 +8,7 @@ function ItemRow(){
             <CartItem/>
             <CartItem/>
             <CartItem/>
+            <CartItem/>
         </div>
 
     )

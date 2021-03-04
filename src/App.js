@@ -1,4 +1,5 @@
 import './App.css';
+import CircleButton from './CircleButton';
 import ItemRow from "./ItemRow"
 
 function App() {
@@ -8,19 +9,43 @@ function App() {
         <div className="row">
           <div className="col-md-2">
             <h3>Sizes:</h3>
-            <button className="btn btn-default btn-circle">XS</button>
-				    <button className="btn btn-default btn-circle">S</button>
-            <button className="btn btn-default btn-circle">M</button>
-            <button className="btn btn-default btn-circle">ML</button>
-            <button className="btn btn-default btn-circle">L</button>
-            <button className="btn btn-default btn-circle">XL</button>
-            <button className="btn btn-default btn-circle">XXL</button>
-            <p>Leave a star on github  if this repository was useful.</p>
-            <button className="btn btn-default"><span class="glyphicon glyphicon-star"></span> Star </button>
+            <CircleButton size="XS"/>
+            <CircleButton size="S"/>
+            <CircleButton size="M"/>
+            <CircleButton size="ML"/>
+            <CircleButton size="L"/>
+            <CircleButton size="XL"/>
+            <CircleButton size="XXL"/>
+				    
+            <button className="btn btn-default"><span className="glyphicon glyphicon-star"></span> Star </button>
             <button className="btn btn-default" id="talkBubble">932</button>
           </div>
-          <div className="container">
-            <ItemRow/>
+          <div className="col-md-10">
+            <div className="container">
+              <div className="row">
+                <div className="col-md-3">
+                  <h3>16 Product(s) found</h3>
+                </div>
+                <div className="col-md-offset-3 col-md-2">
+                  <h3 className="text-center">Order by: </h3>
+                </div>
+                <div className="col-md-1 col-xs-offset-1">
+                  <h3><select className="form-control">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                  </select></h3>
+                </div>
+              </div>
+	        	</div>
+            <div className="container">
+              <ItemRow/>
+              <ItemRow/>
+              <ItemRow/>
+              <ItemRow/>
+            </div>
           </div>
         </div>
       </div>
